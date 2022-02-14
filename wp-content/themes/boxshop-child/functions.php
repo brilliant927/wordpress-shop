@@ -104,30 +104,13 @@ function cfwc_display_custom_field() {
     // Check for the custom field value
     $product = wc_get_product( $post->ID );
     $title = $product->get_meta( 'custom_price_range' );
-    $custom_field1 = $product->get_meta( 'custom_field1' );
-    $custom_field2 = $product->get_meta( 'custom_field2' );
-    $custom_field3 = $product->get_meta( 'custom_field3' );
-    $div1 = $title ? "<div style='justify-content:center; display: flex'>
-            <label class  = 'custom_price_range' id = 'custom_price_range'></label>
-        </div>" : "";
-    $div2 = ($custom_field1 || $custom_field2 || $custom_field3) ? "<div style='justify-content:center; display: flex'>
-    <div class ='spliter_div'>
-        <img class ='img' src = '../../wp-includes/images/fall_height.png'/>
-        <span  style = 'padding-top:10px'>{$custom_field1}</span>
-    </div>
-    <div class ='spliter_div'>
-        <img class ='img' src = '../../wp-includes/images/fall_space.png'/>
-        <span  style = 'padding-top:10px'>{$custom_field2}</span>
-    </div>
-    <div class ='spliter_div'>
-        <img class ='img' src = '../../wp-includes/images/install_time.png'/>
-        <span  style = 'padding-top:10px'>{$custom_field3}</span>
-    </div>
-</div>" : "";
     // Only display our field if we've got a value for the field title
-    if($title || $custom_field1 || $custom_field2 || $custom_field3)
+    if($title)
     printf(
-    "<div  class='custom_div'>{$div1}{$div2}
+    "
+        <div>
+            <label class  = 'custom_price_range' id = 'custom_price_range'></label>
+        </div>
         <script>
             var element = document.getElementById('custom_price_range'); 
             switch('{$title}')
@@ -156,30 +139,12 @@ function cfwc_display_custom_field() {
             color:white;
             margin-bottom:5px;
         }
-        .custom_div{
-            border: 1px solid red;   
-            padding:1px 10px 1px 10px;
-            margin-bottom:10px;
-        }
-        .img{
-            
-            width:60px;
-            height:60px;
-        }
-        .spliter_div {
-            
-            display: flex; 
-            align-items: center;
-            flex-direction:column;
-            padding:0 10px 10px 10px;
-        }
         </style>
-    </div>",
+    ",
     esc_html( $title )
     );
 }
-add_action( 'woocommerce_single_product_summary', 'cfwc_display_custom_field' );
-
+add_action( 'woocommerce_single_product_summary', 'cfwc_display_custom_field',3 );
    /**
  * Validate the text field
  * @since 1.0.0
@@ -187,7 +152,10 @@ add_action( 'woocommerce_single_product_summary', 'cfwc_display_custom_field' );
  * @param Integer $product_id Product ID.
  * @param Boolean $quantity Quantity
  */
-function cfwc_validate_custom_field( $passed, $product_id, $quantity ) {
+
+
+
+ function cfwc_validate_custom_field( $passed, $product_id, $quantity ) {
     if( empty( $_POST['cfwc-title-field'] ) ) {
         // Fails validation
         $passed = false;
@@ -280,48 +248,3 @@ function boxshop_template_loop_product_title1(){
     esc_html( $title )
     );
 }
-// function boxshop_template_loop_product_title1(){
-// 	global $post, $product;
-//     $custom_price_rating = get_post_meta( $post->ID, 'custom_price_range', true );
-// 	if( $custom_price_rating ) {
-//         // Only display our field if we've got a value for the field title
-//             printf(
-//             "<div style='justify-content:center; display:flex;' class='cfwc-custom-field-wrapper'>
-//                 <label class  = 'custom_price_range' id = 'custom_price_range{$post->ID}'></label>
-//                 <script>
-//                     var element = document.getElementById('custom_price_range{$post->ID}'); 
-//                     console.log('{$post->ID}'); 
-//                     console.log('{$custom_price_rating}'); 
-//                     switch('{$custom_price_rating}')
-//                     {
-//                         case '1': element.innerHTML = '£';
-//                                 break;
-//                         case '2': element.innerHTML = '££';
-//                                 break;
-//                         case '3': element.innerHTML = '£££';
-//                                 break;
-//                         case '4': element.innerHTML = '££££';
-//                                 break;
-//                         case '5': element.innerHTML = '£££££';
-//                                 break;
-//                         default:  element.innerHTML = '';
-//                         break;
-//                     }
-//                 </script>
-//                 <style>
-//                 .custom_price_range {
-//                     display: flex;
-//                     width: fit-content;
-//                     background-color: black;
-//                     padding:10px;
-//                     border-radius:100px;
-//                     font-size:16px;
-//                     color:white;
-//                     margin-bottom:5px;
-//                 }
-//                 </style>
-//             </div>",
-//             esc_html( $custom_price_rating )
-//             );
-//         }
-// }
