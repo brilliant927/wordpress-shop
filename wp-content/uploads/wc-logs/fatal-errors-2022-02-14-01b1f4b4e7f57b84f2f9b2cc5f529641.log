@@ -1,0 +1,60 @@
+2022-02-14T00:35:34+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 13
+
+2022-02-14T00:35:35+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 13
+
+2022-02-14T06:02:03+00:00 CRITICAL Cannot redeclare boxshop_template_loop_product_title() (previously declared in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php:142) in E:\zeuma\website files\wp-content\themes\boxshop\framework\woo_hooks.php on line 360
+
+2022-02-14T06:02:05+00:00 CRITICAL Cannot redeclare boxshop_template_loop_product_title() (previously declared in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php:142) in E:\zeuma\website files\wp-content\themes\boxshop\framework\woo_hooks.php on line 360
+
+2022-02-14T06:02:06+00:00 CRITICAL Cannot redeclare boxshop_template_loop_product_title() (previously declared in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php:142) in E:\zeuma\website files\wp-content\themes\boxshop\framework\woo_hooks.php on line 360
+
+2022-02-14T06:03:41+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 145
+
+2022-02-14T06:03:43+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 145
+
+2022-02-14T06:12:16+00:00 CRITICAL syntax error, unexpected '':+element1.innerHTML); ' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 189
+
+2022-02-14T06:12:17+00:00 CRITICAL syntax error, unexpected '':+element1.innerHTML); ' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 189
+
+2022-02-14T06:12:47+00:00 CRITICAL syntax error, unexpected ''+"dd:"+element1.innerHTML); ' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 189
+
+2022-02-14T06:12:48+00:00 CRITICAL syntax error, unexpected ''+"dd:"+element1.innerHTML); ' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 189
+
+2022-02-14T06:12:56+00:00 CRITICAL syntax error, unexpected ''); ' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 189
+
+2022-02-14T06:12:57+00:00 CRITICAL syntax error, unexpected ''); ' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 189
+
+2022-02-14T07:19:35+00:00 CRITICAL syntax error, unexpected '/' in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 119
+
+2022-02-14T07:35:11+00:00 CRITICAL Uncaught Error: Call to undefined function boolean() in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php:110
+Stack trace:
+#0 E:\zeuma\website files\wp-includes\class-wp-hook.php(307): cfwc_display_custom_field('')
+#1 E:\zeuma\website files\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 E:\zeuma\website files\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#3 E:\zeuma\website files\wp-content\plugins\woocommerce\templates\content-single-product.php(60): do_action('woocommerce_sin...')
+#4 E:\zeuma\website files\wp-includes\template.php(772): require('E:\\zeuma\\websit...')
+#5 E:\zeuma\website files\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('E:\\zeuma\\websit...', false)
+#6 E:\zeuma\website files\wp-content\themes\boxshop\woocommerce\single-product.php(107): wc_get_template_part('content', 'single-product')
+#7 E:\zeuma\website files\wp-includes\template-loader.php(106): include('E:\\zeuma\\websit...')
+#8 E:\zeuma\websi in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 110
+
+2022-02-14T07:35:16+00:00 CRITICAL Uncaught Error: Call to undefined function boolean() in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php:110
+Stack trace:
+#0 E:\zeuma\website files\wp-includes\class-wp-hook.php(307): cfwc_display_custom_field('')
+#1 E:\zeuma\website files\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 E:\zeuma\website files\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#3 E:\zeuma\website files\wp-content\plugins\woocommerce\templates\content-single-product.php(60): do_action('woocommerce_sin...')
+#4 E:\zeuma\website files\wp-includes\template.php(772): require('E:\\zeuma\\websit...')
+#5 E:\zeuma\website files\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('E:\\zeuma\\websit...', false)
+#6 E:\zeuma\website files\wp-content\themes\boxshop\woocommerce\single-product.php(107): wc_get_template_part('content', 'single-product')
+#7 E:\zeuma\website files\wp-includes\template-loader.php(106): include('E:\\zeuma\\websit...')
+#8 E:\zeuma\websi in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 110
+
+2022-02-14T07:43:01+00:00 CRITICAL Cannot redeclare boxshop_template_loop_product_title1() (previously declared in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php:201) in E:\zeuma\website files\wp-content\themes\boxshop-child\functions.php on line 316
+
+2022-02-14T17:59:00+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in E:\zeuma\website files\wp-admin\includes\class-wp-importer.php on line 5
+
+2022-02-14T17:59:34+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in E:\zeuma\website files\wp-includes\Requests\Transport\cURL.php on line 165
+
+2022-02-14T18:01:26+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in E:\zeuma\website files\wp-content\plugins\woocommerce\includes\log-handlers\class-wc-log-handler-file.php on line 148
+
